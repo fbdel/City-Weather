@@ -1,7 +1,5 @@
 
-
-
-var clientID = "103971723552-j63qs9m5um73bdmpfkskbg0d5v7mgvm2.apps.googleusercontent.com";
+var clientId = "103971723552-j63qs9m5um73bdmpfkskbg0d5v7mgvm2.apps.googleusercontent.com";
 
 // Array of API discovery doc URLs for APIs used by the quickstart
 var DISCOVERY_DOCS = ["https://www.googleapis.com/discovery/v1/apis/youtube/v3/rest"];
