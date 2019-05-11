@@ -13,10 +13,10 @@ Choose a city and find the weather in the city
     - Chuck Norris API
     - OpenMeatherMap API
     - Bootstrap
+    - Heroku
 
 
 ## Links
 
-Heroku address https://the-buyer-app.herokuapp.com/
+Heroku address https://city-weathr.herokuapp.com/
 
-[![Watch the video](src/images/Screen-Shot.png)](https://youtu.be/BTJmvWpzxuc)
