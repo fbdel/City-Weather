@@ -36,6 +36,8 @@ function updatePage(WeatherData){
   console.log("Temperature (F): " + WeatherData.main.temp);
 }
 
+
+
 // Function to empty out the articles
 function clear() {
   $("#article-section").empty();
@@ -63,21 +65,49 @@ $("#run-search").on("click", function(event) {
     url: queryURL,
     method: "GET"
   }).then(updatePage);
+
+
+  
+  const X_RapidAPI_Key = "0d169762b1msh608c367be006006p11335ejsn081c6761fcb2";
+  const X_RapidAPI_Host = "matchilling-chuck-norris-jokes-v1.p.rapidapi.com";
+  const accept = "application/json";
+  
+    $.ajax({
+      url: 'https://matchilling-chuck-norris-jokes-v1.p.rapidapi.com/jokes/random ',
+      headers: {
+        'X-RapidAPI-Host': X_RapidAPI_Host,
+        'X-RapidAPI-Key': X_RapidAPI_Key,
+        'accept': accept
+      },
+      method: 'GET',
+      dataType: 'json',
+      success: function (data) {
+        console.log('succes: ' + data.value);
+        $("#joke-section").append("<div id='chuck'>");
+        $("#joke-section").append("<h4><i><u> Chuck Norris Joke</u></i></h4>");
+        $("#joke-section").append(" <p><i>" + data.value + "</i></p>")
+        $("#joke-section").append("</div>");
+
+
+
+        // document.getElementById('divShowRecord').innerHTML = JSON.stringify(data);
+      },
+      error: function (e) {
+        console.log('Error : Joke could not load.')
+      }
+    })
+  
+ 
+
+
 });
 
 //  .on("click") function associated with the clear button
 $("#clear-all").on("click", clear);
 
 
-// unirest
-//   .get("https://matchilling-chuck-norris-jokes-v1.p.rapidapi.com/jokes/random")
-//   .header("X-RapidAPI-Host", "matchilling-chuck-norris-jokes-v1.p.rapidapi.com")
-//   .header(
-//     "X-RapidAPI-Key",
-//     "15e19ab289mshfb69e95507266adp119f08jsnebb4593df7cc"
-//   )
-//   .header("accept", "application/json")
-//   .end(function(result) {
-//     console.log("Value: "+result.body.value)
-//     console.log(result.status, result.headers, result.body);
-//   });
+
+  
+
+ 
+
