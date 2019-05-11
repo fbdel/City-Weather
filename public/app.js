@@ -66,8 +66,8 @@ $("#run-search").on("click", function(event) {
     method: "GET"
   }).then(updatePage);
 
-
   
+  //Chuck Norris Api
   const X_RapidAPI_Key = "0d169762b1msh608c367be006006p11335ejsn081c6761fcb2";
   const X_RapidAPI_Host = "matchilling-chuck-norris-jokes-v1.p.rapidapi.com";
   const accept = "application/json";
@@ -87,18 +87,11 @@ $("#run-search").on("click", function(event) {
         $("#joke-section").append("<h4><i><u> Chuck Norris Joke</u></i></h4>");
         $("#joke-section").append(" <p><i>" + data.value + "</i></p>")
         $("#joke-section").append("</div>");
-
-
-
-        // document.getElementById('divShowRecord').innerHTML = JSON.stringify(data);
       },
       error: function (e) {
         console.log('Error : Joke could not load.')
       }
     })
-  
- 
-
 
 });
 
