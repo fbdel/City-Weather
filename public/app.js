@@ -68,3 +68,16 @@ $("#run-search").on("click", function(event) {
 //  .on("click") function associated with the clear button
 $("#clear-all").on("click", clear);
 
+
+// unirest
+//   .get("https://matchilling-chuck-norris-jokes-v1.p.rapidapi.com/jokes/random")
+//   .header("X-RapidAPI-Host", "matchilling-chuck-norris-jokes-v1.p.rapidapi.com")
+//   .header(
+//     "X-RapidAPI-Key",
+//     "15e19ab289mshfb69e95507266adp119f08jsnebb4593df7cc"
+//   )
+//   .header("accept", "application/json")
+//   .end(function(result) {
+//     console.log("Value: "+result.body.value)
+//     console.log(result.status, result.headers, result.body);
+//   });
